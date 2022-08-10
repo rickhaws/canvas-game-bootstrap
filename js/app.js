@@ -46,14 +46,16 @@ function init() {
 
 resources.load([
     'img/sprites.png',
-    'img/terrain.png'
+    'img/terrain.png',
+    'img/temp-zertz-sprites.png'
 ]);
 resources.onReady(init);
 
 // Game state
 var player = {
     pos: [0, 0],
-    sprite: new Sprite('img/sprites.png', [0, 0], [39, 39], 16, [0, 1])
+    // sprite: new Sprite('img/sprites.png', [0, 0], [39, 39], 16, [0, 1])
+    sprite: new Sprite('img/temp-zertz-sprites.png', [7200, 0], [1800, 1000], [45, 25], 2, [0, 1, 2, 1]);
 };
 
 var bullets = [];

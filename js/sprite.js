@@ -1,7 +1,8 @@
 
 (function() {
-    function Sprite(url, pos, size, speed, frames, dir, once) {
+    function Sprite(url, pos, imgSize, size, speed, frames, dir, once) {
         this.pos = pos;
+        this.imgSize = imgSize;
         this.size = size;
         this.speed = typeof speed === 'number' ? speed : 0;
         this.frames = frames;
@@ -46,7 +47,7 @@
 
             ctx.drawImage(resources.get(this.url),
                           x, y,
-                          this.size[0], this.size[1],
+                          this.imgSize[0], this.imgSize[1],
                           0, 0,
                           this.size[0], this.size[1]);
         }
